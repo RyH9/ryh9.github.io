@@ -9,6 +9,7 @@ body {
   font-family: 'Roboto', sans-serif;
   display: flex;
   height: 100vh;
+  overflow-y: hidden; /* Prevent page scrolling */
 }
 
 /* Sidebar Menu */
@@ -19,7 +20,6 @@ body {
   padding: 20px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 }
 
 .sidebar h2 {
@@ -49,17 +49,18 @@ body {
 /* Main Content */
 .main-content {
   flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  overflow-y: auto; /* Scroll within this area for content */
   padding: 20px;
 }
 
+/* Home Section */
 .home-section {
   display: flex;
   align-items: center;
   justify-content: center;
   max-width: 900px;
+  margin: auto;
+  padding-bottom: 50px; /* Space below for visual separation */
 }
 
 .profile-picture {
@@ -83,6 +84,61 @@ body {
 .bio p {
   font-size: 1.2rem;
   color: #555;
+}
+
+/* Publications Section */
+.publications-section {
+  padding: 50px 0;
+  background-color: #f9f9f9;
+}
+
+.publications-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.publication-list {
+  list-style: none;
+  padding: 0;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.publication-list li {
+  margin-bottom: 20px;
+}
+
+.publication-list li a {
+  font-size: 1.2rem;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.publication-list li a:hover {
+  text-decoration: underline;
+}
+
+.publication-list li p {
+  font-size: 1rem;
+  color: #555;
+  margin-top: 5px;
+}
+
+.download-cv {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  text-align: center;
+  max-width: 200px;
+}
+
+.download-cv:hover {
+  background-color: #0056b3;
 }
 
 /* Make sure the layout adjusts for smaller screens */
