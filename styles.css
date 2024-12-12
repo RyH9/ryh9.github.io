@@ -185,7 +185,7 @@ h2 {
 }
 
 /* Mobile View Adjustments */
-@media (max-width: 768px) {
+@media only screen and (max-width: 768px) {
   .sidebar {
     left: -250px; /* Sidebar is hidden off-screen */
   }
