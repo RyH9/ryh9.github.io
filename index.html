@@ -14,16 +14,17 @@
   <nav class="sidebar">
     <h2>[Your Name]</h2>
     <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#publications">Publications & CV</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="#" onclick="showSection('home-section')">Home</a></li>
+      <li><a href="#" onclick="showSection('projects-section')">Projects</a></li>
+      <li><a href="#" onclick="showSection('publications-section')">Publications & CV</a></li>
+      <li><a href="#" onclick="showSection('contact-section')">Contact</a></li>
     </ul>
   </nav>
 
   <!-- Main Content Section -->
   <div class="main-content">
-    <section class="home-section">
+    <!-- Home Section -->
+    <section id="home-section" class="content-section active">
       <img src="your-photo.jpg" alt="[Your Name]" class="profile-picture">
       <div class="bio">
         <h1>Hi, I'm [Your Name]</h1>
@@ -34,8 +35,24 @@
       </div>
     </section>
 
+    <!-- Projects Section -->
+    <section id="projects-section" class="content-section">
+      <h2>Projects</h2>
+      <ul class="project-list">
+        <li>
+          <a href="[Link to Project 1]" target="_blank">Project 1 Title</a>
+          <p>Brief description of the project.</p>
+        </li>
+        <li>
+          <a href="[Link to Project 2]" target="_blank">Project 2 Title</a>
+          <p>Brief description of the project.</p>
+        </li>
+        <!-- Add more projects here -->
+      </ul>
+    </section>
+
     <!-- Publications & CV Section -->
-    <section id="publications" class="publications-section">
+    <section id="publications-section" class="content-section">
       <h2>Publications & CV</h2>
       <ul class="publication-list">
         <li>
@@ -51,7 +68,25 @@
       <a href="[Link to Your CV PDF]" class="btn download-cv">Download My CV</a>
     </section>
 
+    <!-- Contact Section -->
+    <section id="contact-section" class="content-section">
+      <h2>Contact</h2>
+      <p>If you'd like to get in touch, feel free to reach out via email or connect with me on <a href="[Your LinkedIn]" target="_blank">LinkedIn</a>.</p>
+      <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+    </section>
   </div>
 
+  <script>
+    function showSection(sectionId) {
+      // Hide all sections
+      var sections = document.querySelectorAll('.content-section');
+      sections.forEach(function(section) {
+        section.classList.remove('active');
+      });
+
+      // Show the selected section
+      document.getElementById(sectionId).classList.add('active');
+    }
+  </script>
 </body>
 </html>

@@ -9,7 +9,6 @@ body {
   font-family: 'Roboto', sans-serif;
   display: flex;
   height: 100vh;
-  overflow-y: hidden; /* Prevent page scrolling */
 }
 
 /* Sidebar Menu */
@@ -53,6 +52,18 @@ body {
   padding: 20px;
 }
 
+/* Content Sections */
+.content-section {
+  display: none;
+  padding: 20px 0;
+  max-width: 900px;
+  margin: auto;
+}
+
+.content-section.active {
+  display: block;
+}
+
 /* Home Section */
 .home-section {
   display: flex;
@@ -86,16 +97,41 @@ body {
   color: #555;
 }
 
-/* Publications Section */
-.publications-section {
-  padding: 50px 0;
-  background-color: #f9f9f9;
+/* Projects Section */
+.projects-section {
+  background-color: #f1f1f1;
 }
 
-.publications-section h2 {
-  font-size: 2rem;
+.project-list {
+  list-style: none;
+  padding: 0;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.project-list li {
   margin-bottom: 20px;
-  text-align: center;
+}
+
+.project-list li a {
+  font-size: 1.2rem;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.project-list li a:hover {
+  text-decoration: underline;
+}
+
+.project-list li p {
+  font-size: 1rem;
+  color: #555;
+  margin-top: 5px;
+}
+
+/* Publications Section */
+.publications-section {
+  background-color: #f9f9f9;
 }
 
 .publication-list {
@@ -141,7 +177,20 @@ body {
   background-color: #0056b3;
 }
 
-/* Make sure the layout adjusts for smaller screens */
+/* Contact Section */
+.contact-section {
+  background-color: #f1f1f1;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.contact-section p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* Responsive Styling */
 @media (max-width: 768px) {
   .home-section {
     flex-direction: column;
