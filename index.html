@@ -10,8 +10,8 @@
 </head>
 <body>
 
-  <!-- Sidebar Menu -->
-  <nav class="sidebar">
+  <!-- Sidebar Menu (Initially Hidden on Mobile) -->
+  <nav class="sidebar" id="sidebar">
     <h2>[Your Name]</h2>
     <ul>
       <li><a href="#" onclick="showSection('home-section')">Home</a></li>
@@ -20,6 +20,11 @@
       <li><a href="#" onclick="showSection('contact-section')">Contact</a></li>
     </ul>
   </nav>
+
+  <!-- Hamburger Icon (Only Visible on Mobile) -->
+  <div class="hamburger" id="hamburger" onclick="toggleSidebar()">
+    &#9776; <!-- This is the hamburger icon (three lines) -->
+  </div>
 
   <!-- Main Content Section -->
   <div class="main-content">
@@ -87,6 +92,12 @@
       // Show the selected section
       document.getElementById(sectionId).classList.add('active');
     }
+
+    function toggleSidebar() {
+      var sidebar = document.getElementById('sidebar');
+      sidebar.classList.toggle('active');
+    }
   </script>
+
 </body>
 </html>
