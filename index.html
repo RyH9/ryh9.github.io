@@ -11,13 +11,15 @@
     <header>
         <nav class="navbar">
             <div class="logo">Ryan Hare</div>
-            <ul class="nav-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">Publications</a></li>
-                <li><a href="#">CV</a></li>
-            </ul>
-            <div class="nav-contact"><a href="#">Contact</a></div>
+            <div class="nav-rows">
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#publications">Publications</a></li>
+                    <li><a href="#cv">CV</a></li>
+                </ul>
+                <div class="nav-contact"><a href="#contact">Contact</a></div>
+            </div>
             <div class="hamburger">
                 <span></span>
                 <span></span>
@@ -27,13 +29,38 @@
 
         <!-- Dropdown menu for mobile users -->
         <ul class="mobile-menu">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Projects</a></li>
-            <li><a href="#">Publications</a></li>
-            <li><a href="#">CV</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#publications">Publications</a></li>
+            <li><a href="#cv">CV</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
     </header>
+
+	<section id="home">
+        <h1>Welcome to Ryan Hare's Machine Learning R&D</h1>
+        <p>This is the homepage. Here, you can find an introduction and overview of my research and projects.</p>
+    </section>
+
+    <section id="projects">
+        <h1>Projects</h1>
+        <p>Here you can showcase the different machine learning projects you’ve worked on.</p>
+    </section>
+
+    <section id="publications">
+        <h1>Publications</h1>
+        <p>List your research papers and other publications here.</p>
+    </section>
+
+    <section id="cv">
+        <h1>CV</h1>
+        <p>Link to or display your CV here.</p>
+    </section>
+
+    <section id="contact" style="min-height: 20vh; max-height: 20vh;">
+        <h1>Contact</h1>
+        <p>Provide a contact form or contact information here.</p>
+    </section>
 
 	<!-- Script to handle the menu button on mobile -->
     <script>
@@ -43,6 +70,16 @@
         hamburger.addEventListener('click', () => {
             mobileMenu.classList.toggle('active');
         });
+		
+		mobileMenu.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+        });
+		
+		document.addEventListener('click', (event) => {
+			if (!hamburger.contains(event.target) && !mobileMenu.contains(event.target)) {
+				mobileMenu.classList.remove('active');
+			}
+		});
     </script>
 </body>
 </html>
