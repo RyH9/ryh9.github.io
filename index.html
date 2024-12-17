@@ -1,24 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Personal Website of Ryan Hare - Machine Learning R&D">
-  <title>Ryan Hare | Personal Website</title>
-  <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Menu</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <nav class="sidebar" id="sidebar">
-    <h2>[Your Name]</h2>
-    <ul>
-      <li><a href="#" onclick="showSection('home-section')">Home</a></li>
-      <li><a href="#" onclick="showSection('projects-section')">Projects</a></li>
-      <li><a href="#" onclick="showSection('publications-section')">Publications & CV</a></li>
-      <li><a href="#" onclick="showSection('contact-section')">Contact</a></li>
-    </ul>
-  </nav>
+    <header>
+        <nav class="navbar">
+            <div class="logo">My Website</div>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Publications</a></li>
+                <li><a href="#">CV</a></li>
+            </ul>
+            <div class="nav-contact"><a href="#">Contact</a></div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
 
+        <!-- Dropdown menu for mobile users -->
+        <ul class="mobile-menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Publications</a></li>
+            <li><a href="#">CV</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </header>
+
+	<!-- Script to handle the menu button on mobile -->
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        
+        hamburger.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
