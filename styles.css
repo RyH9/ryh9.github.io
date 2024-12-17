@@ -9,12 +9,6 @@ section {
 	min-height: 100vh;
 }
 
-section-contact {
-	padding: 100px 20px;
-	min-height: 20vh;
-	max-height: 20vh;
-}
-
 body {
     font-family: Arial, sans-serif;
 	background-color: #222;
