@@ -1,3 +1,9 @@
+/* Hyperlink colors */
+:link { color: #779bf3; text-decoration: none; }
+:visited { color: #9b7cf6; }
+:link:active, :visited:active { color: #FF0000; }
+
+/* Main CSS */
 * {
     margin: 0;
     padding: 0;
@@ -9,6 +15,11 @@ section {
 	min-height: 100vh;
 }
 
+.section-small {
+	min-height: 20vh;
+	max-height: 20vh;
+}
+
 body {
     font-family: Arial, sans-serif;
 	background-color: #222;
@@ -16,6 +27,11 @@ body {
 	padding: 10px 50px;
 }
 
+p {
+	padding: 15px 15px 0px 0px;
+}
+
+/* Header */
 header {
     background-color: #333;
     color: #fff;
@@ -60,28 +76,121 @@ header {
     color: white;
     text-decoration: none;
     padding: 8px 12px;
-    transition: background-color 0.3s;
+    transition: background-color 0.4s, border-radius 0.4s;
+	border-radius: 4px;
 	background-color: #444;
 }
 
 .nav-links li a:hover {
     background-color: #666;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 .nav-contact a {
     color: white;
     text-decoration: none;
     padding: 8px 12px;
-    background-color: #f44336;
+    background-color: #ba1f1f;
     border-radius: 4px;
-    transition: background-color 0.3s;
+    transition: background-color 0.4s, border-radius 0.4s;
 }
 
 .nav-contact a:hover {
-    background-color: #d32f2f;
+    background-color: #981111;
+	border-radius: 10px;
 }
 
+/* Project cards and media tabs */
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.tab-link {
+    background-color: #ccc;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: background-color 0.3s;
+}
+
+.tab-link.active, .tab-link:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+.tab-content {
+    display: flex;
+	max-height: 70vh;
+    flex-wrap: wrap;
+    justify-content: space-between;
+	overflow-y: auto;
+	overflow-x: auto;
+}
+
+.project-card {
+    background-color: #333;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: calc(33.333% - 15px);
+    margin-bottom: 20px;
+    padding: 15px;
+    transition: transform 0.2s;
+	display: flex;
+	flex-direction: row;
+	align-items: stretch;
+}
+
+.project-info {
+	padding-left: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: left;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-card img {
+    width: 30%;
+	max-width: 40%;
+	object-fit: contain;
+    border-radius: 5px;
+}
+
+.project-card h3 {
+    margin: 10px 0;
+}
+
+.project-card p {
+    font-size: 0.9em;
+    color: #666;
+}
+
+.read-more {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .project-card {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .project-card {
+        width: 100%;
+    }
+}
+
+/* Mobile handling */
 .hamburger {
     display: none;
     flex-direction: column;
