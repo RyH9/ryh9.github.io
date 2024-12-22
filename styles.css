@@ -10,21 +10,41 @@
     box-sizing: border-box;
 }
 
-section {
-	padding: 100px 20px;
-	min-height: 100vh;
+@media (max-width: 768px) {
+	section {
+		padding: 90px 0px;
+		min-height: 100vh;
+	}
+}
+
+@media (min-width: 769px) {
+	section {
+		padding: 90px 10px;
+		min-height: 100vh;
+	}
 }
 
 .section-small {
-	min-height: 20vh;
-	max-height: 20vh;
+	min-height: 30vh;
+	max-height: 30vh;
 }
 
-body {
-    font-family: Arial, sans-serif;
-	background-color: #222;
-	color: white;
-	padding: 10px 50px;
+@media (max-width: 768px) {
+	body {
+		font-family: Arial, sans-serif;
+		background-color: #222;
+		color: white;
+		padding: 10px 20px;
+	}
+}
+
+@media (min-width: 769px) {
+	body {
+		font-family: Arial, sans-serif;
+		background-color: #222;
+		color: white;
+		padding: 10px 50px;
+	}
 }
 
 p {
@@ -188,6 +208,52 @@ header {
     .project-card {
         width: 100%;
     }
+}
+
+/* Publication table */
+table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+th, td {
+	padding: 10px;
+	text-align: left;
+	border-bottom: 1px solid #ddd;
+}
+
+th {
+	cursor: pointer;
+}
+
+tr:hover {
+	background-color: #333;
+}
+
+.dataTables_length {
+	padding: 5px;
+}
+
+.dataTables_filter {
+	padding: 5px;
+}
+
+.dataTables_info {
+	padding: 5px;
+}
+
+.dataTables_paginate {
+	padding: 5px;
+}
+
+.paginate_button {
+	color: #779bf3;
+	padding: 2px;
+}
+
+.paginate_button.current {
+	color: #FF0000;
+	padding: 2px;
 }
 
 /* Mobile handling */
