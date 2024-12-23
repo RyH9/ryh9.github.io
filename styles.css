@@ -28,7 +28,7 @@
 	body {
 		font-family: Arial, sans-serif;
 		background-color: #222;
-		color: white;
+		color: #F8F8F8;
 		padding: 0px;
 	}
 }
@@ -37,7 +37,7 @@
 	body {
 		font-family: Arial, sans-serif;
 		background-color: #222;
-		color: white;
+		color: #F8F8F8;
 		padding: 0px;
 	}
 }
@@ -51,10 +51,64 @@ h1 {
 	font-size: xxx-large;
 }
 
+/* Biography content */
+.bio-title {
+	text-align: center;
+}
+
+.bio-content-container {
+	padding: 3%;
+}
+
+.bio-content {
+	padding: 0px 20px 40px;
+	font-size: x-large;
+	line-height: 1.5em;
+}
+
+.bio-img-container {
+	float: right;
+	width: 40%;
+	padding: 3%;
+}
+
+.bio-img {
+	padding: 3%;
+	width: 100%;
+	height: auto;
+	border-radius: 13%;
+}
+
+.bio-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+}
+
+.bio-links li a {
+    color: black;
+	font-size: large;
+	white-space: nowrap;
+    text-decoration: none;
+    padding: 10px 14px;
+    transition: background-color 0.4s, border-radius 0.4s, color 0.4s;
+	border-radius: 4px;
+	background-color: #ccc;
+}
+
+.bio-links li a:hover {
+    background-color: #0056b3;
+	color: #F8F8F8;
+    border-radius: 10px;
+}
+
 /* Header */
 header {
     background-color: #333;
-    color: #fff;
+    color: #F8F8F8;
     padding: 40px 0;
     position: fixed;
 	top: 0;
@@ -93,26 +147,27 @@ header {
 }
 
 .nav-links li a {
-    color: white;
+    color: black;
     text-decoration: none;
     padding: 8px 11px;
-    transition: background-color 0.4s, border-radius 0.4s;
+    transition: background-color 0.4s, border-radius 0.4s, color 0.4s;
 	border-radius: 4px;
-	background-color: #444;
+	background-color: #ccc;
 }
 
 .nav-links li a:hover {
-    background-color: #666;
+    background-color: #0056b3;
+	color: #F8F8F8;
     border-radius: 10px;
 }
 
 .nav-contact a {
-    color: white;
+    color: #F8F8F8;
     text-decoration: none;
     padding: 8px 11px;
     background-color: #007bff;
     border-radius: 4px;
-    transition: background-color 0.4s, border-radius 0.4s;
+    transition: background-color 0.4s, border-radius 0.4s, color 0.4s;
 }
 
 .nav-contact a:hover {
@@ -141,18 +196,19 @@ footer {
     padding: 10px 20px;
     cursor: pointer;
     margin: 0 5px;
-    transition: background-color 0.3s, border-radius 0.4s;
+	border-radius: 4px;
+    transition: background-color 0.4s, border-radius 0.4s, color 0.4s;
 	display: flex;
 }
 
 .tab-link.active {
     background-color: #007bff;
-    color: white;
+    color: #F8F8F8;
 }
 
 .tab-link:hover {
 	background-color: #0056b3;
-	color: white;
+	color: #F8F8F8;
 	border-radius: 10px;
 }
 
@@ -254,11 +310,13 @@ tr:hover {
 }
 
 .dataTables_info {
-	padding: 5px;
+	padding: 10px 5px 10px 0px;
+	text-align: center;
 }
 
 .dataTables_paginate {
-	padding: 5px;
+	padding: 0px;
+	text-align: center;
 }
 
 .paginate_button {
@@ -279,7 +337,7 @@ tr:hover {
 }
 
 .hamburger span {
-    background-color: white;
+    background-color: #F8F8F8;
     height: 3px;
     width: 25px;
     margin: 4px 0;
@@ -304,7 +362,7 @@ tr:hover {
 }
 
 .mobile-menu li a {
-    color: white;
+    color: #F8F8F8;
     text-decoration: none;
     padding: 10px;
     display: block;

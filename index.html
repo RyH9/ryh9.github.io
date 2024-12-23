@@ -38,17 +38,24 @@
     </header>
 
 	<section id="home">
-        <h1 style="text-align: center;">Hi, I'm Ryan</h1>
-		<div style="float: left; width: 50%; padding: 3%;">
-        <p style="padding: 20px; font-size: x-large; line-height: 1.5em;">
+        <h1 class="bio-title">Hi, I'm Ryan</h1>
+		<div class="bio-img-container">
+		<img class="bio-img" src="imgs/headshot.png" alt="Picture of a cat">
+		</div>
+		<div class="bio-content-container">
+        <p class="bio-content">
 			I am a computer engineering researcher who specializes in applications of machine learning and artificial intelligence, including neural networks, reinforcement learning, and large language models.
 		</p>
-		<p style="padding: 20px; font-size: x-large; line-height: 1.5em;">
+		<p class="bio-content">
 			My current research centers around applying new and emerging technologies to enable better education for students.
 		</p>
-		</div>
-		<div style="float: right; width: 40%; padding: 3%;">
-		<img src="imgs/headshot.png" alt="Picture of a cat" style="padding: 3%; width: 100%; border-radius: 50px;">
+		<p class "bio-content">
+			<ul class="bio-links">
+				<li><a href="#projects">Check out my projects</a></li>
+				<li><a href="#publications">See my publications</a></li>
+				<li><a href="#contact">Contact me</a></li>
+			</ul>
+		</p>
 		</div>
 	</section>
 
@@ -88,7 +95,7 @@
 				</div>
 			</div>
 
-		<script src="projectTabs.js"></script>
+		<script src="js/projectTabs.js"></script>
     </section>
 
     <section id="publications">
@@ -251,8 +258,8 @@
 			</tbody>
 		</table>
 		
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-		<script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+        <script src="js/jquery-3.6.0.min.js"></script>
+		<script src="js/jquery.dataTables.min.js"></script>
 		<script>
 			// Initialize DataTables with sorting and search functionality
 			$(document).ready(function() {
