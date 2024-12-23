@@ -1,7 +1,7 @@
 /* Hyperlink colors */
 :link { color: #779bf3; text-decoration: none; }
 :visited { color: #9b7cf6; }
-:link:active, :visited:active { color: #FF0000; }
+:link:active, :visited:active { color: #007bff; }
 
 /* Main CSS */
 * {
@@ -19,8 +19,8 @@
 
 @media (min-width: 769px) {
 	section {
-		padding: 200px 10%;
-		min-height: 100vh;
+		padding: 200px 10% 0px;
+		min-height: 90vh;
 	}
 }
 
@@ -110,13 +110,13 @@ header {
     color: white;
     text-decoration: none;
     padding: 8px 11px;
-    background-color: #ba1f1f;
+    background-color: #007bff;
     border-radius: 4px;
     transition: background-color 0.4s, border-radius 0.4s;
 }
 
 .nav-contact a:hover {
-    background-color: #981111;
+    background-color: #0056b3;
 	border-radius: 10px;
 }
 
@@ -141,13 +141,19 @@ footer {
     padding: 10px 20px;
     cursor: pointer;
     margin: 0 5px;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, border-radius 0.4s;
 	display: flex;
 }
 
-.tab-link.active, .tab-link:hover {
+.tab-link.active {
     background-color: #007bff;
     color: white;
+}
+
+.tab-link:hover {
+	background-color: #0056b3;
+	color: white;
+	border-radius: 10px;
 }
 
 .tab-content {
@@ -261,7 +267,7 @@ tr:hover {
 }
 
 .paginate_button.current {
-	color: #FF0000;
+	color: #1a88ff;
 	padding: 2px;
 }
 
