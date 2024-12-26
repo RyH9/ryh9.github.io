@@ -36,18 +36,29 @@
             <li><a href="#contact">Contact</a></li>
         </ul>
     </header>
+	
+	<!-- Error if the user doesn't have javascript -->
+	<noscript>
+		<input type="checkbox" id="close-warning" style="display: none;" />
 
+		<div class="noscript-warning">
+			<span class="close-btn" onclick="document.getElementById('close-warning').checked = true;">&times;</span>
+			<strong>Hey!</strong> Some elements of this site might not work properly without JavaScript.
+		</div>
+	</noscript>
+	
+	<!-- Main site content -->
 	<section id="home">
         <h1 class="bio-title">Hi, I'm Ryan</h1>
 		<div class="bio-img-container">
-		<img class="bio-img" src="imgs/headshot.png" alt="Picture of a cat">
+		<img class="bio-img" src="imgs/headshot.png" alt="Head shot portrait of Ryan Hare">
 		</div>
 		<div class="bio-content-container">
         <p class="bio-content">
 			I am a computer engineering researcher who specializes in applied machine learning and computational intelligence, including neural networks, reinforcement learning, and large language models.
 		</p>
 		<p class="bio-content">
-			My current research centers around applying emerging technologies to enable better education for students. Ultimately, I focus on finding out how computers can help support teachers and make education more accessible.
+			My current research interests are centered around education. Many of my recent publications focus on using new technologies to support students and teachers.
 		</p>
 		<p class "bio-content">
 			<ul class="bio-links">
@@ -68,17 +79,46 @@
 				<button class="tab-link" onclick="showCategory('other')">Other</button>
 			</div>
 			
+			<!--
+			G: Serious Games and Tutoring (https://youtu.be/Kr-p7aS0VtQ)
+			G: Waterworks
+			G: Geotech
+			UG: ARSL 3D
+			UG: Memsat
+			O: Github
+			UG: Processor Design? Maybe just put this one on Github.
+			UG: PCB Design Piano? Also a github project.
+			-->
 			<div class="tab-content">
 				<div class="project-card" id="grad">
-					<img src="project2.jpg" alt="Project 2">
+					<img src="IMAGE LINK" alt="PING">
 					<div class="project-info">
-						<h3>Graduate project</h3>
-						<p>Add a short description</p>
-						<a href="project2-details.html" class="read-more">Read More</a>
+						<h3>The PING System</h3>
+						<p>The PING (Personalized Instruction and Need-aware Gaming) system is a generalized recommender system I've spearheaded, designed for easy integration into educational software.</p>
+						<p>My work on this project has been self-driven, requiring research, Python programming, data analysis, and reinforcement learning algorithm development. The PING system is my current main research focus.</p>
+						<a href="https://users.rowan.edu/~tang/#/gridlock/research" class="read-more">Read More</a>
+					</div>
+				</div>
+				<div class="project-card" id="grad">
+					<img src="IMAGE LINK" alt="Gridlock">
+					<div class="project-info">
+						<h3>Gridlock</h3>
+						<p>Gridlock is an educational game made in Unity. The game is designed to augment the computer engineering curriculum by reinforcing students' knowledge of logic design. See a summary of Gridlock <a href="https://youtu.be/MEVNIUs9Nig">here</a>.</p>
+						<p>My contributions to this project include programming in C#, environment design, game system overhauls, and the integration of AI-driven personalized assistance.</p>
+						<a href="https://users.rowan.edu/~tang/#/gridlock/home" class="read-more">Read More</a>
+					</div>
+				</div>
+				<div class="project-card" id="grad">
+					<img src="IMAGE LINK" alt="SPARC">
+					<div class="project-info">
+						<h3>SPARC</h3>
+						<p>SPARC (Systematic Problem-solving and Algorithmic Reasoning for Children) is a game for middle school students that teaches early science concepts while boosting problem-solving and computational thinking skills through a mobile game.</p>
+						<p>I've consulted with our research team to design new game scenarios, independently developed several game modules using Unity and C#, and am assisting with the ongoing developments using large language models.</p>
+						<a href="https://users.rowan.edu/~tang/#/humanbody/home" class="read-more">Read More</a>
 					</div>
 				</div>
 				<div class="project-card" id="undergrad">
-					<img src="project2.jpg" alt="Project 2">
+					<img src="IMAGE LINK" alt="IMAGE ALT">
 					<div class="project-info">
 						<h3>Graduate project</h3>
 						<p>Add a short description</p>
@@ -107,153 +147,192 @@
 					<th>Year</th>
 					<th>Title</th>
 					<th>Authors</th>
+					<th>Type</th>
 					<th>Link</th>
 				</tr>
 			</thead>
 			<tbody>
 				<tr>
-					<td>20xx</td>
-					<td>Lorem Ipsum</td>
-					<td>Jane Doe, John Smith</td>
-					<td><a href="publication1.pdf" target="_blank">Download</a></td>
+				  <td>2024</td>
+				  <td>Enhancing student experience and learning with iterative design in an intelligent educational game</td>
+				  <td><b>R. Hare</b>, S. Ferguson, and Y. Tang</td>
+				  <td>Journal</td>
+				  <td><a href="https://doi.org/10.1111/bjet.13526">Access</a></td>
 				</tr>
 				<tr>
-					<td>20xx</td>
-					<td>Lorem Ipsum</td>
-					<td>Alice Johnson, Robert Brown</td>
-					<td><a href="publication2.pdf" target="_blank">Download</a></td>
+				  <td>2024</td>
+				  <td>An Intelligent Serious Game for Digital Logic Education to Enhance Student Learning</td>
+				  <td><b>R. Hare</b>, Y. Tang, and S. Ferguson</td>
+				  <td>Journal</td>
+				  <td><a href="https://doi.org/10.1109/TE.2024.3359001">Access</a></td>
 				</tr>
 				<tr>
-					<td>20xx</td>
-					<td>Lorem Ipsum</td>
-					<td>Jane Doe, John Smith</td>
-					<td><a href="publication1.pdf" target="_blank">Download</a></td>
+				  <td>2023</td>
+				  <td>Parallel intelligent education with ChatGPT</td>
+				  <td>J. Wang, Y. Tang, <b>R. Hare</b>, and F.-Y. Wang</td>
+				  <td>Journal</td>
+				  <td><a href="https://doi.org/10.1631/fitee.2300166">Access</a></td>
 				</tr>
 				<tr>
-					<td>20xx</td>
-					<td>Lorem Ipsum</td>
-					<td>Alice Johnson, Robert Brown</td>
-					<td><a href="publication2.pdf" target="_blank">Download</a></td>
+				  <td>2023</td>
+				  <td>Hierarchical Deep Reinforcement Learning With Experience Sharing for Metaverse in Education</td>
+				  <td><b>R. Hare</b> and Y. Tang</td>
+				  <td>Journal</td>
+				  <td><a href="https://doi.org/10.1109/TSMC.2022.3227919">Access</a></td>
 				</tr>
 				<tr>
-					<td>20xx</td>
-					<td>Lorem Ipsum</td>
-					<td>Jane Doe, John Smith</td>
-					<td><a href="publication1.pdf" target="_blank">Download</a></td>
+				  <td>2023</td>
+				  <td>Player Modeling and Adaptation Methods Within Adaptive Serious Games</td>
+				  <td><b>R. Hare</b> and Y. Tang</td>
+				  <td>Journal</td>
+				  <td><a href="https://doi.org/10.1109/TCSS.2022.3203926">Access</a></td>
 				</tr>
 				<tr>
-					<td>20xx</td>
-					<td>Lorem Ipsum</td>
-					<td>Alice Johnson, Robert Brown</td>
-					<td><a href="publication2.pdf" target="_blank">Download</a></td>
+				  <td>2023</td>
+				  <td>MetaEdu: a new framework for future education</td>
+				  <td>L. Cui, C. Zhu, <b>R. Hare</b>, and Y. Tang</td>
+				  <td>Journal</td>
+				  <td><a href="https://doi.org/10.1007/s44163-023-00053-9">Access</a></td>
 				</tr>
 				<tr>
-					<td>20xx</td>
-					<td>Lorem Ipsum</td>
-					<td>Jane Doe, John Smith</td>
-					<td><a href="publication1.pdf" target="_blank">Download</a></td>
+				  <td>2023</td>
+				  <td>A Learning-Embedded Attributed Petri Net to Optimize Student Learning in a Serious Game</td>
+				  <td>J. Liang, Y. Tang, <b>R. Hare</b>, B. Wu, and F.-Y. Wang</td>
+				  <td>Journal</td>
+				  <td><a href="https://doi.org/10.1109/TCSS.2021.3132355">Access</a></td>
 				</tr>
 				<tr>
-					<td>20xx</td>
-					<td>Lorem Ipsum</td>
-					<td>Alice Johnson, Robert Brown</td>
-					<td><a href="publication2.pdf" target="_blank">Download</a></td>
+				  <td>2022</td>
+				  <td>Student Modeling and Analysis in Adaptive Instructional Systems</td>
+				  <td>J. Liang, <b>R. Hare</b>, T. Chang, F. Xu, Y. Tang, and F.-Y. Wang</td>
+				  <td>Journal</td>
+				  <td><a href="https://doi.org/10.1109/ACCESS.2022.3178744">Access</a></td>
 				</tr>
 				<tr>
-					<td>20xx</td>
-					<td>Lorem Ipsum</td>
-					<td>Jane Doe, John Smith</td>
-					<td><a href="publication1.pdf" target="_blank">Download</a></td>
+				  <td>2020</td>
+				  <td>A Personalized Learning System for Parallel Intelligent Education</td>
+				  <td>Y. Tang, J. Liang, <b>R. Hare</b>, and F.-Y. Wang</td>
+				  <td>Journal</td>
+				  <td><a href="https://doi.org/10.1109/TCSS.2020.2965198">Access</a></td>
 				</tr>
 				<tr>
-					<td>20xx</td>
-					<td>Lorem Ipsum</td>
-					<td>Alice Johnson, Robert Brown</td>
-					<td><a href="publication2.pdf" target="_blank">Download</a></td>
+				  <td>2024</td>
+				  <td>Ontology-driven Reinforcement Learning for Personalized Student Support</td>
+				  <td><b>R. Hare</b> and Y. Tang</td>
+				  <td>Conference</td>
+				  <td><a href="https://arxiv.org/abs/2407.10332">Access</a></td>
 				</tr>
 				<tr>
-					<td>20xx</td>
-					<td>Lorem Ipsum</td>
-					<td>Jane Doe, John Smith</td>
-					<td><a href="publication1.pdf" target="_blank">Download</a></td>
+				  <td>2023</td>
+				  <td>Reinforcement Learning with Experience Sharing for Intelligent Educational Systems</td>
+				  <td><b>R. Hare</b> and Y. Tang</td>
+				  <td>Conference</td>
+				  <td><a href="https://doi.org/10.1109/SMC53992.2023.10394095">Access</a></td>
 				</tr>
 				<tr>
-					<td>20xx</td>
-					<td>Lorem Ipsum</td>
-					<td>Alice Johnson, Robert Brown</td>
-					<td><a href="publication2.pdf" target="_blank">Download</a></td>
+				  <td>2023</td>
+				  <td>Combining Gamification and Intelligent Tutoring Systems for Engineering Education</td>
+				  <td><b>R. Hare</b>, Y. Tang, and C. Zhu</td>
+				  <td>Conference</td>
+				  <td><a href="https://doi.org/10.1109/FIE58773.2023.10343378">Access</a></td>
 				</tr>
 				<tr>
-					<td>20xx</td>
-					<td>Lorem Ipsum</td>
-					<td>Jane Doe, John Smith</td>
-					<td><a href="publication1.pdf" target="_blank">Download</a></td>
+				  <td>2023</td>
+				  <td>Creative Geotechnical Engineering Education Module Based on an Educational Game Using Multiphysics Enriched Mixed Reality</td>
+				  <td>L. Cui, W. Cai, <b>R. Hare</b>, C. Huang, Y. Tang, and C. Zhu</td>
+				  <td>Conference</td>
+				  <td><a href="https://doi.org/10.1109/FIE58773.2023.10343396">Access</a></td>
 				</tr>
 				<tr>
-					<td>20xx</td>
-					<td>Lorem Ipsum</td>
-					<td>Alice Johnson, Robert Brown</td>
-					<td><a href="publication2.pdf" target="_blank">Download</a></td>
+				  <td>2023</td>
+				  <td>Engineering Human Body for Systematic and Computational Thinking</td>
+				  <td>C. Zhu, J. E. Ahn, L. Cui, <b>R. Hare</b>, and Y. Tang</td>
+				  <td>Conference</td>
+				  <td><a href="https://doi.org/10.1109/FIE58773.2023.10342946">Access</a></td>
 				</tr>
 				<tr>
-					<td>20xx</td>
-					<td>Lorem Ipsum</td>
-					<td>Jane Doe, John Smith</td>
-					<td><a href="publication1.pdf" target="_blank">Download</a></td>
+				  <td>2023</td>
+				  <td>Gamified and IoT-integrated Approach for Water Industry Education and Outreach</td>
+				  <td>L. Cui, <b>R. Hare</b>, Y. Tang, and T. Casas</td>
+				  <td>Conference</td>
+				  <td><a href="https://peer.asee.org/gamified-and-iot-integrated-approach-for-water-industry-education-and-outreach">Access</a></td>
 				</tr>
 				<tr>
-					<td>20xx</td>
-					<td>Lorem Ipsum</td>
-					<td>Alice Johnson, Robert Brown</td>
-					<td><a href="publication2.pdf" target="_blank">Download</a></td>
+				  <td>2022</td>
+				  <td>3D Multi-Angle Point Cloud Stitching Using Iterative Closest-point Stitching and K-Nearest-Neighbors</td>
+				  <td>P. Patel, <b>R. Hare</b>, Y. Tang, and N. Patel</td>
+				  <td>Conference</td>
+				  <td><a href="https://doi.org/10.1109/ICCSI55536.2022.9970689">Access</a></td>
 				</tr>
 				<tr>
-					<td>20xx</td>
-					<td>Lorem Ipsum</td>
-					<td>Jane Doe, John Smith</td>
-					<td><a href="publication1.pdf" target="_blank">Download</a></td>
+				  <td>2022</td>
+				  <td>Petri Nets and Hierarchical Reinforcement Learning for Personalized Student Assistance in Serious Games</td>
+				  <td><b>R. Hare</b> and Y. Tang</td>
+				  <td>Conference</td>
+				  <td><a href="https://doi.org/10.1109/ICCSI55536.2022.9970680">Access</a></td>
 				</tr>
 				<tr>
-					<td>20xx</td>
-					<td>Lorem Ipsum</td>
-					<td>Alice Johnson, Robert Brown</td>
-					<td><a href="publication2.pdf" target="_blank">Download</a></td>
+				  <td>2022</td>
+				  <td>A Graph-based Approach for Adaptive Serious Games</td>
+				  <td><b>R. Hare</b>, N. Patel, Y. Tang, and P. Patel</td>
+				  <td>Conference</td>
+				  <td><a href="https://doi.org/10.1109/DASC/PiCom/CBDCom/Cy55231.2022.9928013">Access</a></td>
 				</tr>
 				<tr>
-					<td>20xx</td>
-					<td>Lorem Ipsum</td>
-					<td>Jane Doe, John Smith</td>
-					<td><a href="publication1.pdf" target="_blank">Download</a></td>
+				  <td>2022</td>
+				  <td>Classroom Evaluation of a Gamified Adaptive Tutoring System</td>
+				  <td>Y. Tang, <b>R. Hare</b>, and S. Ferguson</td>
+				  <td>Conference</td>
+				  <td><a href="https://doi.org/10.1109/FIE56618.2022.9962718">Access</a></td>
 				</tr>
 				<tr>
-					<td>20xx</td>
-					<td>Lorem Ipsum</td>
-					<td>Alice Johnson, Robert Brown</td>
-					<td><a href="publication2.pdf" target="_blank">Download</a></td>
+				  <td>2022</td>
+				  <td>Mixed Reality Game for Active Geotechnical Engineering Learning</td>
+				  <td>Y. Tang, C. Zhu, <b>R. Hare</b>, T. Ziesse, C. Peterson, and C. Huang</td>
+				  <td>Conference</td>
+				  <td><a href="https://peer.asee.org/mixed-reality-game-for-active-geotechnical-engineering-learning">Access</a></td>
 				</tr>
 				<tr>
-					<td>20xx</td>
-					<td>Lorem Ipsum</td>
-					<td>Jane Doe, John Smith</td>
-					<td><a href="publication1.pdf" target="_blank">Download</a></td>
+				  <td>2022</td>
+				  <td>Evaluation of an AI-assisted Adaptive Educational Game System</td>
+				  <td>Y. Tang and <b>R. Hare</b></td>
+				  <td>Conference</td>
+				  <td><a href="https://peer.asee.org/evaluation-of-an-ai-assisted-adaptive-educational-game-system">Access</a></td>
 				</tr>
 				<tr>
-					<td>20xx</td>
-					<td>Lorem Ipsum</td>
-					<td>Alice Johnson, Robert Brown</td>
-					<td><a href="publication2.pdf" target="_blank">Download</a></td>
+				  <td>2021</td>
+				  <td>Player Modelling and Adaptation Methods within Adaptive Serious Games</td>
+				  <td><b>R. Hare</b> and Y. Tang</td>
+				  <td>Conference</td>
+				  <td><a href="https://doi.org/10.1109/ICCSI53130.2021.9736213">Access</a></td>
 				</tr>
 				<tr>
-					<td>20xx</td>
-					<td>Lorem Ipsum</td>
-					<td>Jane Doe, John Smith</td>
-					<td><a href="publication1.pdf" target="_blank">Download</a></td>
+				  <td>2021</td>
+				  <td>Evaluation of a Game-Based Personalized Learning System</td>
+				  <td>Y. Tang and <b>R. Hare</b></td>
+				  <td>Conference</td>
+				  <td><a href="https://peer.asee.org/evaluation-of-a-game-based-personalized-learning-system">Access</a></td>
 				</tr>
 				<tr>
-					<td>20xx</td>
-					<td>Lorem Ipsum</td>
-					<td>Alice Johnson, Robert Brown</td>
-					<td><a href="publication2.pdf" target="_blank">Download</a></td>
+				  <td>2020</td>
+				  <td>Optimize Student Learning via Random Forest-Based Adaptive Narrative Game</td>
+				  <td><b>R. Hare</b>, Y. Tang, W. Cui, and J. Liang</td>
+				  <td>Conference</td>
+				  <td><a href="https://doi.org/10.1109/CASE48305.2020.9217020">Access</a></td>
+				</tr>
+				<tr>
+				  <td>2020</td>
+				  <td>A Random Forest Model for Personalized Learning in a Narrative Game</td>
+				  <td>Y. Tang and <b>R. Hare</b></td>
+				  <td>Conference</td>
+				  <td><a href="https://peer.asee.org/a-random-forest-model-for-personalized-learning-in-a-narrative-game">Access</a></td>
+				</tr>
+				<tr>
+				  <td>2019</td>
+				  <td>Adaptive Narrative Game for Personalized Learning</td>
+				  <td>Y. Tang and <b>R. Hare</b></td>
+				  <td>Conference</td>
+				  <td><a href="https://doi.org/10.1109/SOLI48380.2019.8955069">Access</a></td>
 				</tr>
 			</tbody>
 		</table>
