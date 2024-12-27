@@ -216,7 +216,7 @@ footer {
     display: flex;
 	max-height: 70vh;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
 	overflow-y: auto;
 	overflow-x: auto;
 }
@@ -234,6 +234,10 @@ footer {
 	align-items: stretch;
 }
 
+.project-card:hover {
+	transform: translateY(-3px);
+}
+
 .project-info {
 	padding-left: 20px;
 	display: flex;
@@ -241,8 +245,38 @@ footer {
 	justify-content: left;
 }
 
-.project-card:hover {
-    transform: translateY(-3px);
+.project-info .description {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: 45px;
+	max-width: 100%;
+    transition: max-height 0.3s ease-in-out;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+	display: -webkit-box;
+}
+
+.project-card.expanded .description {
+    text-overflow: unset;
+    max-height: 100%;
+	max-width: 100%;
+	-webkit-line-clamp: unset;
+}
+
+.expand-arrow {
+    cursor: pointer;
+    font-size: 1.2em;
+    margin-top: 10px;
+    display: inline-block;
+	align-self: center;
+    transition: transform 0.3s ease-in-out;
+	padding: 5px 45%;
+	border-radius: 5px;
+	user-select: none;
+}
+
+.project-card.expanded .expand-arrow {
+    transform: rotate(180deg);
 }
 
 .project-card img {
@@ -266,8 +300,12 @@ footer {
     text-decoration: none;
     color: #779bf3;
     font-weight: bold;
-    display: block;
+    display: none;
     margin-top: 10px;
+}
+
+.project-card.expanded .read-more {
+    display: block;
 }
 
 @media (max-width: 768px) {

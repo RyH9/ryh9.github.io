@@ -21,3 +21,17 @@ function showCategory(category) {
     }
     event.target.classList.add('active');
 }
+
+
+document.querySelectorAll('.project-card').forEach(card => {
+    const arrow = card.querySelector('.expand-arrow');
+    
+	if (arrow != null){
+		arrow.addEventListener('click', () => {
+			card.classList.toggle('expanded');
+		});
+	}
+	else{
+		card.classList.toggle('expanded');
+	}
+});
