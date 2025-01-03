@@ -373,6 +373,8 @@ tr:hover {
     display: none;
     flex-direction: column;
     cursor: pointer;
+	position: relative;
+	right: 15%;
 }
 
 .hamburger span {
