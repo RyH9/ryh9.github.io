@@ -1,0 +1,129 @@
+/* Body settings */
+body {
+	background-color: #0d1117;
+	color: #c9d1d9;
+	max-width: 1000px;
+	margin: 40px auto;
+	padding: 0 1em;
+}
+
+div{
+	text-align: center;
+	font-size: 24px;
+	padding: 0.2em 0px;
+}
+
+/* Divs for various elements */
+div.bar {
+	display: inline-block;
+	width: 20px;
+	height: 75px;
+	margin-right: 2px;
+	background-color: teal;
+}
+
+div.tooltip{
+	position: absolute;
+	z-index: 10;
+	background: #c9d1d9;
+	color: #0d1117;
+	font-size: 20px;
+	padding: 0.2em;
+	white-space: pre-line;
+}
+
+input.datetime{
+	width: 22em;
+	line-height: 15px;
+	font-size: 100%;
+}
+
+div.simcont {
+	display: grid;
+	padding-left: 25%;
+	padding-right: 25%;
+}
+
+.btn.sim {
+	grid-column: 2;
+	grid-row: 1;
+}
+
+div.btncont {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+}
+
+/* Map SVG */
+svg.map {
+	background: url('../images/LekagulHDSmoothedDulled.png');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	margin: auto;
+	display: block;
+}
+
+.container {
+  overflow: hidden;
+}
+
+.filterDiv {
+  float: left;
+  background-color: #2196F3;
+  color: #ffffff;
+  width: 100px;
+  line-height: 100px;
+  text-align: center;
+  margin: 2px;
+  display: none; /* Hidden by default */
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 1em 2em;
+  background-color: #aeaeae;
+  color: black;
+  cursor: pointer;
+  margin: 0.15em;
+}
+
+/* Select button colors */
+.btn.veh1 {
+  background-color: #ff9933;
+}
+.btn.veh2 {
+  background-color: #3399ff;
+}
+.btn.veh3 {
+  background-color: #00e6e6;
+}
+.btn.veh4 {
+  background-color: #00e600;
+}
+.btn.veh5 {
+  background-color: #cccc00;
+}
+.btn.veh6 {
+  background-color: #cc33ff;
+}
+.btn.veh7 {
+  background-color: #e60000;
+}
+
+/* Add a lighter background on mouse-over */
+.btn:hover {
+  filter: brightness(125%);
+}
+
+/* Add a dark background to the active button */
+.btn.active {
+  filter: brightness(50%);
+}

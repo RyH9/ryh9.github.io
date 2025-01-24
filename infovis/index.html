@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+		<link rel="stylesheet" href="./style/style.css">
+        <meta charset="utf-8">
+        <title>2017 MC1 Live Routes</title>
+		<!-- Include D3 -->
+		<script src="https://d3js.org/d3.v3.min.js"></script>
+		
+		<!-- Include date-range selection UI -->
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+		
+		<!-- Include my JS -->
+		<script type="text/javascript" src="./js/mc1routes.js"></script>
+    </head>
+    <body>
+		<div> Select date range: <input type="text" name="datetimes" class="datetime"/></div>
+		<div class="simcont"> <p> Simulate vehicle positions: </p>
+			<button class="btn sim" id="simOnBtn" onclick="routeDrawing.enableSimulation()"> Enable Simulation </button>
+			<button class="btn sim" id = "simOffBtn" style="visibility: hidden;" onclick="routeDrawing.disableSimulation()"> Disable Simulation </button>
+		</div>
+		<div id="simTimer" style="height: 0em; visibility: hidden;"> Current time: </div>
+		<div id="vehicleTypeButtons" class="btncont">
+			<button class="btn active" onclick="routeDrawing.updateCarFilters('all')"> Show all </button>
+			<button class="btn veh1" onclick="routeDrawing.updateCarFilters('1')"> 2-axle Cars </button>
+			<button class="btn veh2" onclick="routeDrawing.updateCarFilters('2')"> 2-axle Trucks </button>
+			<button class="btn veh3" onclick="routeDrawing.updateCarFilters('3')"> 3-axle Trucks </button>
+			<button class="btn veh4" onclick="routeDrawing.updateCarFilters('4')"> 4-axle Trucks </button>
+			<button class="btn veh5" onclick="routeDrawing.updateCarFilters('5')"> 2-axle Buses </button>
+			<button class="btn veh6" onclick="routeDrawing.updateCarFilters('6')"> 3-axle Buses </button>
+			<button class="btn veh7" onclick="routeDrawing.updateCarFilters('2P')"> 2P (Rangers) </button>
+		</div>
+		<div></div>
+		<svg height="800" width="800" class="map"></svg>
+		<div style="position:absolute;right:20%;top:260px" >
+			<svg id ="bar" height="150" width="300"></svg>
+		</div>
+		<script type="text/javascript">
+			
+		</script>
+    </body>
+</html>
